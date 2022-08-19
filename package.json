@@ -1,0 +1,44 @@
+{
+  "name": "bitopro-sdk-ts",
+  "version": "1.0.0",
+  "description": "Non official sdk for 'bitopro.com', support typescript.",
+  "keywords": [
+    "bitopro",
+    "Non-official",
+    "sdk",
+    "typescript",
+    "cryptocurrency",
+    "exchange"
+  ],
+  "homepage": "https://github.com/seconddim/bitopro-sdk-ts#readme",
+  "bugs": {
+    "url": "https://github.com/seconddim/bitopro-sdk-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seconddim/bitopro-sdk-ts.git"
+  },
+  "license": "MIT",
+  "author": "2seconddim@gmail.com",
+  "main": "dist/bitopro.js",
+  "types": "dist/bitopro.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "rm -rf dist/; tsc --project tsconfig.build.json",
+    "publish": "npm publish --dry-run=true",
+    "publish:prod": "npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "socks-proxy-agent": "^7.0.0",
+    "ws": "^8.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/ws": "^8.5.3",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
